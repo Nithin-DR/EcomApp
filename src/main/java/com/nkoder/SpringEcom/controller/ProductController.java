@@ -86,7 +86,7 @@ public class ProductController {
     // @RequestPart → multipart/form-data
 
 
-    @DeleteMapping("/product/{id}")
+    @DeleteMapping("/product/{id}")//to delete records based on selected ID
     public ResponseEntity<String> deleteProduct(@PathVariable int id) {
         Optional<Product> product = productService.getById(id);
         if (product != null) {
